@@ -1,0 +1,313 @@
+// Footer Area Css:
+.footer-area{
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  h2{
+    color: $lightblack02;
+    font-size: 40px;
+    text-transform
+    
+    
+    
+    
+    uppercase;
+    font-weight: 700;
+    margin-top: 50px;
+  }
+  h4{
+    color: $lightGray03;
+    font-size: 20px;
+    font-weight: 400;
+  }
+  img{
+    display: inline-block;
+  }
+}
+.footer-style-default{
+   padding-top: 0px;
+  
+}
+.footer-style-1{
+  padding-bottom: 50px;
+  h2,
+  h4{
+    color: #ffffff;
+  }
+  .footer-bot{
+    margin-bottom: 80px;
+  }
+  #menu-footer-menu{
+    a{
+      color: rgba(255,255,255,0.5);
+      transition: color 0.4s ease-in-out, letter-spacing 0.4s ease-in-out;;
+      letter-spacing: 1px;
+      &:hover{
+        color: #fff;
+        letter-spacing: 3px;
+      }
+    }
+  }
+  @media screen and (min-width: $screen-md){
+    padding-bottom: 130px;
+  }
+}
+.footer-style-1,
+.footer-style-2{
+  text-align: center;
+  #menu-footer-menu{
+    a{
+      color: rgba(255,255,255,0.5);
+      transition: color 0.4s ease-in-out, letter-spacing 0.4s ease-in-out;;
+      letter-spacing: 1px;
+      &:hover{
+        color: #fff;
+        letter-spacing: 3px;
+      }
+    }
+  }
+  h4{
+    font-size: 14px;
+    text-transform: capitalize;
+  }
+}
+.footer-style-2{
+  padding-top: 130px;
+  .footer-bot{
+    margin-top: 80px;
+  }
+  h2{
+    font: 28px $roboto;
+    color: #fff;
+    line-height: 1;
+    @media screen and (min-width: $screen-sm){
+      font-size: 48px;
+    }
+  }
+}
+#menu-footer-menu{
+  padding-left:0px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  @media (min-width: $screen-md){
+    margin-bottom: 0px;
+  }
+  @media (min-width: $screen-lg){
+    margin-top: 100px;
+  }
+  li{
+    display: block;
+    list-style: none;
+    padding: 10px 0;
+    & + li{
+      border-top: 1px solid $lightGray07;
+    }
+    @media (min-width: $screen-sm) {
+      display: inline-block;
+      & + li{
+        border: none;
+        padding:0 15px;
+      }
+    }
+    @media (min-width: $screen-md){
+      & + li{
+        padding:0 5px;
+      }
+    }
+    @media (min-width: $screen-lg){
+      & + li{
+        padding:0 13px;
+      }
+    }
+  }
+  a{
+    font-weight: 400;
+    color: $lightGray04;
+    font-size: 14px;
+    text-transform: uppercase;
+    &:hover{
+      text-decoration: none;
+    }
+  }
+}
+
+.footer-bot{
+  background:$white03;
+  padding:10px 0;
+  text-align:center;
+  @media (min-width: $screen-md){
+    p{
+      text-align: left;
+      margin-top: 20px;
+      a{
+        color: $lightGray02;
+      }
+    }
+  }
+}
+
+.social-area{
+  padding-left: 0px;
+  margin-top: 10px;
+  li{
+    list-style: none;
+    display: inline-block;
+    margin: 5px;
+    @media (min-width: $screen-md){
+      margin: 0 10px;
+    }
+  }
+  i{
+    background: $darkGray;
+    color: $white;
+    border-radius: 50px;
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    line-height: 40px;
+    border: 1px solid transparent;
+    transition-property: border,background,color;
+    transition: 0.4s ease-in-out;
+    &.fa-twitter{
+      background:$lightBlue05;
+    }
+    &.fa-facebook{
+      background:$darkBlue;
+    }
+    &.fa-google-plus{
+      background: $lightGray05;
+    }
+    &.fa-dribbble{
+      background:$pink;
+    }
+    &.fa-youtube{
+      background:$red;
+    }
+    &.fa-behance{
+      background: #1769ff;
+    }
+    &:hover{
+      &.fa-twitter{
+        border-color: $lightBlue05;
+        color: $lightBlue05;
+        background: transparent;
+      }
+      &.fa-facebook{
+        border-color::$darkBlue;
+        color: $darkBlue;
+        background: transparent;
+      }
+      &.fa-google-plus{
+        border-color:: $lightGray05;
+        color: $lightGray05;
+        background: transparent;
+      }
+      &.fa-dribbble{
+        border-color:: $pink;
+        color: $pink;
+        background: transparent;
+      }
+      &.fa-youtube{
+        border-color:: $red;
+        color: $red;
+        background: transparent;
+      }
+      &.fa-behance{
+        border-color:: #1769ff;
+        color: #1769ff;
+        background: transparent;
+      }
+    }
+  }
+  @media (min-width: $screen-md){
+    text-align: right;
+  }
+}
+
+.social-icon{
+  background: $darkGray;
+  padding: 14px;
+  color: $white;
+  border-radius: 50px;
+  height: 40px;
+  width: 40px;
+  &.fa-twitter{
+    background:$lightBlue05;
+  }
+  &.fa-facebook{
+    background:$darkBlue;
+  }
+  &.fa-google-plus{
+    background:$lightGray05;
+  }
+  &.fa-dribbble{
+    background:$pink;
+  }
+  &.fa-youtube{
+    background:$red;
+  }
+  &:hover{
+    text-decoration: none;
+  }
+}
+
+/*----------- Subscribe Area Css ----------------*/
+.subscribe-area{
+  background: $lightBlue02;
+  background: linear-gradient(to right,  $lightBlue02 0%,$lightblack03 100%);
+  padding:26px 0;
+  text-align: center;
+  @media (max-width: $screen-sm - 1) {
+    .form-control{
+      width: 80%;
+      margin: 0 auto;
+    }
+  }
+  h3{
+    text-transform: uppercase;
+    color: $white;
+    font-weight: 300;
+    font-size: 25px;
+    margin-top: 5px;
+    span{
+      font-weight: 500;
+    }
+  }
+  .newsletterwrap{
+    padding-top: 40px;
+  }
+  .form-text{
+    margin-bottom: 20px;
+    @media (min-width: $screen-md) {
+      margin-bottom: 0;
+    }
+  }
+  @media (min-width: $screen-md) {
+    text-align: left;
+  }
+}
+.input-newsletter{
+  color: $white;
+  border-color: $lightBlue03;
+  background: transparent;
+  height: 44px;
+  box-shadow: none;
+  &::placeholder {
+    color:$lightBlue04;
+    font-size: 12px;
+    font-style: italic;
+  }
+  &:focus{
+    box-shadow: 0 0 0 0;
+    outline: none;
+    border: 1px solid $lightGreen;
+  }
+}
+
+@media (min-width: $screen-md){
+  .subscribe-area{
+    .newsletterwrap{
+      padding-top: 0px;
+    }
+  }
+}

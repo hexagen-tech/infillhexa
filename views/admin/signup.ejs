@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="shortcut icon" href="images/fav.png" type="image/png" sizes="16x16">
+<title>INFILLHEXA</title>
+<link rel='stylesheet' href='stylesheets/rs6.css' type='text/css' media='all' />
+<link rel='stylesheet' href='stylesheets/go_font.css' type='text/css' media='all' />
+<link rel='stylesheet' href='stylesheets/style.css' type='text/css' media='all' />
+<link rel='stylesheet' href='stylesheets/vendor.css' type='text/css' media='all' />
+<link rel='stylesheet' href='stylesheets/threed-main.css' type='text/css' media='all' />
+<link rel='stylesheet' href='stylesheets/owl.carousel.css' type='text/css' media='all' />
+<link rel='stylesheet' href='stylesheets/owl.theme.css' type='text/css' media='all' />
+<link rel='stylesheet' href='stylesheets/js_composer.min.css' type='text/css' media='all' />
+<link rel='stylesheet' href='stylesheets/Defaults/Defaults.css' type='text/css' media='all' />
+<link rel='stylesheet' href='stylesheets/fonts.css' type='text/css' media='all' />
+<link rel='stylesheet' href='stylesheets/signup.css' type='text/css' media='all' />
+
+<link rel='stylesheet' href='stylesheets/style.min.css' type='text/css' media='all' />
+<link rel='stylesheet' href='stylesheets/advanced-buttons.min.css' type='text/css' media='all' />
+<link rel='stylesheet' href='stylesheets/animate.min.css' type='text/css' media='all' />
+<link rel='stylesheet' href='stylesheets/info-box.min.css' type='text/css' media='all' />
+<script type='text/javascript' src='javascripts/jquery.js'></script>
+<script type='text/javascript' src='javascripts/jquery-migrate.min.js'></script>
+<script type='text/javascript' src='javascripts/revolution.tools.min.js'></script>
+<script type='text/javascript' src='javascripts/rs6.min.js'></script>
+<script type='text/javascript' src='javascripts/add-to-cart.min.js'></script>
+<script type='text/javascript' src='javascripts/woocommerce-add-to-cart.js'></script>
+<script type='text/javascript' src='javascripts/jquery.validate.min.js'></script>
+<script type='text/javascript' src='javascripts/ultimate-params.min.js'></script>
+<script type='text/javascript' src='javascripts/custom.min.js'></script>
+<script type='text/javascript' src='javascripts/jquery-appear.min.js'></script>
+        <meta name="viewport" content="" />
+        <meta name="generator" content=""/>
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<%- include('header'); -%>
+<div class="form_wrapper">
+  <div class="form_container">
+    <div class="title_container">
+      <h2>New User Registration Form</h2>
+    </div>
+    <div class="row clearfix">
+      <div class="">
+        <form action="/auth/login/signup" method="post">
+           <div class="input_field"> <span><i aria-hidden="true" class="fa fa-user"></i></span>
+            <input type="text" name="name" placeholder="Name" required />
+          </div>
+           <div class="input_field"> <span><i aria-hidden="true" class="fa fa-phone"></i></span>
+            <input type="text" name="number" placeholder="ContactNo" required />
+          </div>
+          <div class="input_field"> <span><i aria-hidden="true" class="fa fa-envelope"></i></span>
+            <input type="email" name="email" placeholder="Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required /></div>
+             <div class="input_field"> <span><i aria-hidden="true" class="fa fa-user"></i></span>
+            <input type="text" name="username" placeholder="UserName" required />
+          </div>
+          
+          <div class="input_field"> <span><i aria-hidden="true" class="fa fa-lock"></i></span>
+            <input type="password" name="password" id="password"   placeholder="Password" required />
+          </div>
+          <div class="input_field"> <span><i aria-hidden="true" class="fa fa-lock"></i></span>
+            <input type="password" name="password1"tabindex="2" class="form-control" onchange="matchingpass();" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"  placeholder="Re-type Password" required />
+          </div>
+          <span class="resetpass_msg" id="message" style="color:#ca1f7a;"></span>
+          <input class="button" type="submit" value="Register"  />
+        </form>        
+      </div>
+    </div>
+  </div>
+</div>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/core.js"></script>
+
+<script type="text/javascript">
+  
+  function matchingpass(){
+  var newpass = document.getElementById('#password').val();
+  var confirmpass = document.getElementById('#confirm_password').val();
+  if(newpass == confirmpass){
+    document.getElementsByClassName(".resetpass_msg").html(" Password matched!");
+    document.getElementById('#submit').removeAttr('disabled');
+    return 1;
+  }else{
+    document.getElementsByClassName(".resetpass_msg").html("Password doesn't matched!");
+    document.getElementById('#submit').attr('disabled', 'disabled');
+    return 2;
+  }
+  }
+  
+  </script>
+
+   <!-- partial -->
+ 
+   <%- include('footer'); -%>
+</div><!-- #page -->
+
+<link rel="stylesheet" property="stylesheet" href="/stylesheets/font-awesome.css" type="text/css" media="all" />
+<link href="https://fonts.googleapis.com/css?family=Roboto:400%2C500%2C900" rel="stylesheet" property="stylesheet" media="all" type="text/css" >
+<link rel='stylesheet' href='/stylesheets/font-awesome.min.css' type='text/css' media='all' />
+<link rel='stylesheet' href='/stylesheets/animate.min.css' type='text/css' media='all' />
+<link rel='stylesheet' href='/stylesheets/background-style.min.css' type='text/css' media='all' />
+<script type='text/javascript' src='/javascripts/scripts.js'></script>
+<script type='text/javascript' src='/javascripts/bootstrap.min.js'></script>
+<script type='text/javascript' src='/javascripts/owl.carousel.min.js'></script>
+<script type='text/javascript' src='/javascripts/waypoints.min.js'></script>
+<script type='text/javascript' src='/javascripts/threed-main.js'></script>
+<script type='text/javascript' src='/javascripts/js_composer_front.min.js'></script>
+<script type='text/javascript' src='/javascripts/skrollr.min.js'></script>
+<script type='text/javascript' src='/javascripts/ultimate_bg.min.js'></script>
+<script type='text/javascript'>
+var  threedsettings = {"main_product_owl_item":"3","main_product_navigation":"dots"};
+</script>
+<script type='text/javascript' src='/javascripts/owl-main-product-script.js'></script>
+</body>
+</html>

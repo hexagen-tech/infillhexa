@@ -1,0 +1,299 @@
+<%- include('headeradmin'); -%>
+<div class="page-wrapper">
+	<div class="container-fluid">
+		
+		<!-- Title -->
+		<div class="row heading-bg bg-green">
+			<div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
+			  <h5 class="txt-light">Address</h5>
+			</div>
+			<!-- Breadcrumb -->
+			<div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
+			  <ol class="breadcrumb">
+				<li><a href="index">Dashboard</a></li>
+				<li><a href="#"><span>Address</span></a></li>
+				<li class="active"><span>Address Table</span></li>
+			  </ol>
+			</div>
+			<!-- /Breadcrumb -->
+		</div>
+		<!-- /Title -->
+		<div class="back">
+            <button type="button" class="btn btn-info btn-rounded mt-2 float-right"
+            data-toggle="modal" data-target="#add-contact">Add Address</button>
+    </div>
+    <div id="add-contact" class="modal fade in"  role="dialog"
+                            aria-labelledby="myModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                   
+                                        <button type="button" class="close" data-dismiss="modal"
+                                        aria-hidden="true" style="color:#ffffff">×</button>
+                                        <h4 class="modal-title" id="myModalLabel" style="color: #fff">Add address</h4>
+                                      
+                                        
+                                    </div> <div class="modal-body">
+                                                <div class="form-group">
+                                                    <h5>Customer Name <span class="text-danger">*</span></h5>
+                                                    <div class="controls">
+                                                       
+                                                    
+                                                    <input type="text" class="form-control" placeholder="" name="service_group_name" >
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <h5>Address <span class="text-danger">*</span></h5>
+                                                    <div class="controls">
+                                                       <textarea class="form-control" name="message" rows="5" ></textarea>
+                                                   </div>
+                                                </div>
+                                               
+                                                <div class="modal-footer">
+                                                    <button type="submit" class="btn btn-info waves-effect" >Save</button>
+                                                    <button type="button" class="btn btn-default waves-effect" data-dismiss="modal">Cancel</button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    
+                                    
+                                </div>
+                            </div>
+                        </div>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		<!-- Row -->
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="panel panel-default card-view">
+					<div class="panel-heading">
+						<div class="pull-left">
+						
+						</div>
+						<div class="clearfix"></div>
+					</div>
+					<div class="panel-wrapper collapse in">
+						<div class="panel-body">
+							<div class="table-wrap">
+								<div class="table-responsive">
+									<table id="datable_1" class="table table-hover display  pb-30" >
+										<thead>
+											<tr>
+												<th>Name</th>
+												<th>Email</th>
+												<th>Purchased Times</th>
+												<th>Address</th>
+												<th>Action</th>
+										
+											</tr>
+										</thead>
+										<tfoot>
+											<tr>
+												<th>Name</th>
+												<th>Email</th>
+												<th>Purchased Times</th>
+												<th>Address</th>
+												<th>Action</th>
+											</tr>
+										</tfoot>
+										<tbody>
+											<tr>
+												<td>Tiger Nixon</td>
+												<td>System Architect</td>
+												<td>Edinburgh</td>
+												<td>61</td>
+												<td class="text-nowrap">
+                                             <i class="fa fa-edit"style="color:green"></i>
+                                            <i class="fa fa-trash text-danger"></i> 
+                                            </td>
+												
+											</tr>
+											<tr>
+												<td>Garrett Winters</td>
+												<td>Accountant</td>
+												<td>Tokyo</td>
+												<td>63</td>
+												<td class="text-nowrap">
+													<i class="fa fa-edit"style="color:green"></i>
+												   <i class="fa fa-trash text-danger"></i> 
+												   </td>
+											</tr>
+											<tr>
+												<td>Ashton Cox</td>
+												<td>Junior Technical Author</td>
+												<td>San Francisco</td>
+												<td>66</td>
+												<td class="text-nowrap">
+													<i class="fa fa-edit"style="color:green"></i>
+												   <i class="fa fa-trash text-danger"></i> 
+												   </td>
+											</tr>
+											<tr>
+												<td>Cedric Kelly</td>
+												<td>Senior Javascript Developer</td>
+												<td>Edinburgh</td>
+												<td>22</td>
+												<td class="text-nowrap">
+													<i class="fa fa-edit"style="color:green"></i>
+												   <i class="fa fa-trash text-danger"></i> 
+												   </td>
+											</tr>
+											<tr>
+												<td>Airi Satou</td>
+												<td>Accountant</td>
+												<td>Tokyo</td>
+												<td>33</td>
+												<td class="text-nowrap">
+													<i class="fa fa-edit"style="color:green"></i>
+												   <i class="fa fa-trash text-danger"></i> 
+												   </td>
+											</tr>
+											<tr>
+												<td>Brielle Williamson</td>
+												<td>Integration Specialist</td>
+												<td>New York</td>
+												<td>61</td>
+												<td class="text-nowrap">
+													<i class="fa fa-edit"style="color:green"></i>
+												   <i class="fa fa-trash text-danger"></i> 
+												   </td>
+											</tr>
+											<tr>
+												<td>Herrod Chandler</td>
+												<td>Sales Assistant</td>
+												<td>San Francisco</td>
+												<td>59</td>
+												<td class="text-nowrap">
+													<i class="fa fa-edit"style="color:green"></i>
+												   <i class="fa fa-trash text-danger"></i> 
+												   </td>
+											</tr>
+											<tr>
+												<td>Rhona Davidson</td>
+												<td>Integration Specialist</td>
+												<td>Tokyo</td>
+												<td>55</td>
+												<td class="text-nowrap">
+													<i class="fa fa-edit"style="color:green"></i>
+												   <i class="fa fa-trash text-danger"></i> 
+												   </td>
+											</tr>
+											<tr>
+												<td>Colleen Hurst</td>
+												<td>Javascript Developer</td>
+												<td>San Francisco</td>
+												<td>39</td>
+												<td class="text-nowrap">
+													<i class="fa fa-edit"style="color:green"></i>
+												   <i class="fa fa-trash text-danger"></i> 
+												   </td>
+											</tr>
+											<tr>
+												<td>Sonya Frost</td>
+												<td>Software Engineer</td>
+												<td>Edinburgh</td>
+												<td>23</td>
+												<td class="text-nowrap">
+													<i class="fa fa-edit"style="color:green"></i>
+												   <i class="fa fa-trash text-danger"></i> 
+												   </td>
+											</tr>
+											<tr>
+												<td>Jena Gaines</td>
+												<td>Office Manager</td>
+												<td>London</td>
+												<td>30</td>
+												<td class="text-nowrap">
+													<i class="fa fa-edit"style="color:green"></i>
+												   <i class="fa fa-trash text-danger"></i> 
+												   </td>
+											</tr>
+											<tr>
+												<td>Quinn Flynn</td>
+												<td>Support Lead</td>
+												<td>Edinburgh</td>
+												<td>22</td>
+												<td class="text-nowrap">
+													<i class="fa fa-edit"style="color:green"></i>
+												   <i class="fa fa-trash text-danger"></i> 
+												   </td>
+											</tr>
+											<tr>
+												<td>Charde Marshall</td>
+												<td>Regional Director</td>
+												<td>San Francisco</td>
+												<td>36</td>
+												<td class="text-nowrap">
+													<i class="fa fa-edit"style="color:green"></i>
+												   <i class="fa fa-trash text-danger"></i> 
+												   </td>
+											</tr>
+											<tr>
+												<td>Haley Kennedy</td>
+												<td>Senior Marketing Designer</td>
+												<td>London</td>
+												<td>43</td>
+												<td class="text-nowrap">
+													<i class="fa fa-edit"style="color:green"></i>
+												   <i class="fa fa-trash text-danger"></i> 
+												   </td>
+											</tr>
+											<tr>
+												<td>Tatyana Fitzpatrick</td>
+												<td>Regional Director</td>
+												<td>London</td>
+												<td>19</td>
+												<td class="text-nowrap">
+													<i class="fa fa-edit"style="color:green"></i>
+												   <i class="fa fa-trash text-danger"></i> 
+												   </td>
+											</tr>
+											
+										
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>	
+			</div>
+		</div>
+<%- include('footeradmin'); -%>

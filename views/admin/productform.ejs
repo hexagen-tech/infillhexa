@@ -1,0 +1,210 @@
+<%- include('headeradmin'); -%>
+
+			<!-- Main Content -->
+			<div class="page-wrapper">
+				<div class="container-fluid">
+					
+					<!-- Title -->
+					<% if (result == 1) { %>
+<form action="/admin/productform/<%= result._id %>" method="post" enctype="multipart/form-data">
+					<div class="row row1"> 
+						<div class="col-md-12">
+							<div class="panel panel-default card-view">
+								<div class="panel-heading">
+								
+									<div class="clearfix"></div>
+								</div>
+								<div class="panel-wrapper collapse in">
+									<div class="panel-body">
+										<div class="row">
+											<div class="col-sm-12 col-xs-12">
+												<div class="form-wrap">
+													<form action="#">
+														<div class="form-body">
+                                                            <div style="    padding-bottom: 10px;">
+                                                            <h3 style="text-align:center">Product Form</h3>
+                                                        </div>
+                                                            <hr>
+                                                           
+															<div class="row">
+																<div class="col-md-6">
+																	<div class="form-group">
+																		<label class="control-label mb-10">Product Name</label>
+																		<input type="text" id="firstName"  name="pname"class="form-control" placeholder="John doe" >
+																		
+																	</div>
+																</div>
+																<!--/span-->
+                                                                <div class="col-md-6">
+																	<div class="form-group">
+																		<label class="control-label mb-10">Product Id</label>
+																		<input type="text" id="firstName"  name="pid"class="form-control" placeholder="John doe" >
+																		
+																	</div>
+																</div>
+																<!--/span-->
+															</div>
+															<!-- /Row -->
+															<div class="row">
+                                                                <div class="col-md-6">
+																	<div class="form-group">
+																		<label class="control-label mb-10">Pricing</label>
+																		<input type="text" id="firstName" name="price" class="form-control" placeholder="John doe">
+																		
+																	</div>
+																</div>
+                                                                <!--/span-->
+                                                              <div class="col-md-6">
+																	<div class="form-group">
+																		<label class="control-label mb-10">image</label>
+																		<input type="file" class="dropify imgheight" data-default-file="../images/admin_image/user1.png" name="file"  />
+																		
+																	</div>
+                                                                </div>
+                                                             </div>
+															<!-- /Row -->
+															<div class="row">
+																<div class="col-md-6">
+																	<div class="form-group">
+																		<label class="control-label mb-10">Category</label>
+																		<select class="form-control" name="category" data-placeholder="Choose a Category" tabindex="1" id="dropdownlist">
+																			<option value="Category 1">Category 1 </option>
+																			<option value="Category 2">Category 2</option>
+																			<option value="Category 3">Category 3 </option>
+                                                                            <option value="Category 4">Category 4 </option>
+                                                                            <option value="1">Other</option>
+                                                                        </select>
+                                                                       
+																	</div>
+																</div>
+																<!--/span-->
+                                                                
+                                                                <div id="inputArea"></div>
+																<!--/span-->
+															</div>
+														
+														
+														</div>
+														<div class="form-actions mt-10"  style="text-align: right;">
+															<button type="submit" class="btn btn-success  mr-10"> Save</button>
+															<button type="button" class="btn btn-default">Cancel</button>
+														</div>
+													</form>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>		
+						</div>
+					</div>
+					<!-- /Row -->
+					
+				</form>
+				<%} else { %>
+					<form action="/admin/product_update/<%= result._id %>" method="post" enctype="multipart/form-data">
+						<div class="row row1"> 
+							<div class="col-md-12">
+								<div class="panel panel-default card-view">
+									<div class="panel-heading">
+									
+										<div class="clearfix"></div>
+									</div>
+									<div class="panel-wrapper collapse in">
+										<div class="panel-body">
+											<div class="row">
+												<div class="col-sm-12 col-xs-12">
+													<div class="form-wrap">
+														<form action="#">
+															<div class="form-body">
+																<div style="    padding-bottom: 10px;">
+																<h3 style="text-align:center">Product Form</h3>
+															</div>
+																<hr>
+															   
+																<div class="row">
+																	<div class="col-md-6">
+																		<div class="form-group">
+																			<label class="control-label mb-10">Product Name</label>
+																			<input type="text" id="firstName"  name="pname"class="form-control" placeholder="John doe" value="<%=result.productname%>">
+																			
+																		</div>
+																	</div>
+																	<!--/span-->
+																	<div class="col-md-6">
+																		<div class="form-group">
+																			<label class="control-label mb-10">Product Id</label>
+																			<input type="text" id="firstName"  name="pid"class="form-control" placeholder="John doe" value="<%=result.productid%>">
+																			
+																		</div>
+																	</div>
+																	<!--/span-->
+																</div>
+																<!-- /Row -->
+																<div class="row">
+																	<div class="col-md-6">
+																		<div class="form-group">
+																			<label class="control-label mb-10">Pricing</label>
+																			<input type="text" id="firstName" name="price" class="form-control" placeholder="John doe" value="<%=result.price%>">
+																			
+																		</div>
+																	</div>
+																	<!--/span-->
+																  <div class="col-md-6">
+																		<div class="form-group">
+																			<label class="control-label mb-10">image</label>
+																			<input type="file" class="dropify imgheight" data-default-file="../../productupload/<%= result.image%>" name="file" />
+																			
+																		</div>
+																	</div>
+																 </div>
+																<!-- /Row -->
+																<div class="row">
+																	<div class="col-md-6">
+																		<div class="form-group">
+																			<label class="control-label mb-10">Category</label>
+																			<select class="form-control" name="category" data-placeholder="Choose a Category" tabindex="1" id="dropdownlist">
+																				<option value="Category 1">Category 1 </option>
+																				<option value="Category 2">Category 2</option>
+																				<option value="Category 3">Category 3 </option>
+																				<option value="Category 4">Category 4 </option>
+																				<option value="1">Other</option>
+																			</select>
+																		   
+																		</div>
+																	</div>
+																	<!--/span-->
+																	
+																	<div id="inputArea"></div>
+																	<!--/span-->
+																</div>
+															
+															
+															</div>
+															<div class="form-actions mt-10"  style="text-align: right;">
+																<button type="submit" class="btn btn-success  mr-10"> Save</button>
+																<button type="button" class="btn btn-default">Cancel</button>
+															</div>
+														</form>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>		
+							</div>
+						</div>
+						<!-- /Row -->
+						
+					</form>
+					<% } %>
+				</div>
+				
+                <%- include('footeradmin'); -%>
+                <script>
+                $("#dropdownlist").change(function () {
+                    var numInputs = $(this).val();
+                    for (var i = 0; i < numInputs; i++)
+                      $("#inputArea").append(' <div class="col-md-6"><div class="form-group"><label class="control-label mb-10">Add New Catagory</label><input type="text" class="form-control" name=inputs[]</div> </div>');
+                  });
+                </script>

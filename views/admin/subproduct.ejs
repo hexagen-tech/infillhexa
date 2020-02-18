@@ -1,0 +1,105 @@
+<%- include('headeradmin'); -%>
+
+			<!-- Main Content -->
+			<div class="page-wrapper">
+				<div class="container-fluid">
+					
+					<!-- Title -->
+				
+
+					<div class="row"> 
+						<div class="col-md-12">
+							<div class="panel panel-default card-view">
+								
+								<div class="panel-wrapper collapse in">
+									<div class="panel-body">
+										<div class="row">
+											<div class="col-sm-12 col-xs-12">
+												<div class="form-wrap">
+													
+														<div class="form-body">
+                                                            <div style="padding-bottom: 10px;">
+                                                            <h3 style="text-align:center">Add Sub-Product Form</h3>
+                                                        </div>
+                                                            <hr>
+                                                            <!---->
+															<form action="/admin/subproduct" method="POST" enctype="multipart/form-data" >
+																
+																		<div class="row">
+																			<div class="col-md-12">
+																				<div class="form-group">
+																					<label class="control-label mb-10">Add Product</label>
+																					<% if(result) { %>
+																					<select class="form-control" name="Product" data-placeholder="Choose a Product" tabindex="1" id="dropdownlist">
+																						<% result.forEach(function(show){ %>
+																						<option value="<%= show.id%>"><%= show.productname%></option>
+																						<% }) %>
+																					</select>
+																					<% } %>
+																				</div>
+																			</div>
+																			
+																			<div class="col-md-6">
+																				<div class="form-group">
+																					<label class="control-label mb-10">Product Name</label>
+																					<input type="text" id="firstName"  name="spname" class="form-control" placeholder="John doe" >
+																					
+																				</div>
+																			</div>
+																			<div class="col-md-6">
+																				<div class="form-group">
+																					<label class="control-label mb-10">Product Id</label>
+																					<input type="text" id="first"  name="spid" class="form-control" placeholder="pid" >
+																					
+																				</div>
+																			</div>
+																			<div class="col-md-6">
+																				<div class="form-group">
+																					<label class="control-label mb-10">Pricing</label>
+																					<input type="text" id="price" name="sprice" class="form-control" placeholder="John doe">
+																					
+																				</div>
+																			</div>
+																			<div class="col-md-6">
+																				<div class="form-group">
+																					<label class="control-label mb-10">image</label>
+																					<input type="file" class="dropify imgheight" data-default-file="../images/admin_image/user1.png" name="file"  />
+																					
+																				</div>
+																			</div>
+																				</div>
+																				<div class="form-actions mt-10"  style="text-align: right;">
+																		<button type="submit" class="btn btn-success  mr-10"> Save</button>
+																		<button type="button" class="btn btn-default">Cancel</button>
+																	</div>
+														</form>
+                                                                </div>
+                                                               
+                                                            </div>
+                                                          
+                                                          
+															
+															<!-- /Row -->
+															
+                                                               
+															</div>
+														
+														
+														</div>
+														
+													
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							
+					<!-- /Row -->
+					
+			
+				
+				</div>
+				</div>
+				
+                <%- include('footeradmin'); -%>
+               

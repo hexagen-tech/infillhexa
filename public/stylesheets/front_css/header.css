@@ -1,0 +1,276 @@
+/*--------------------Header Area Css: -----------------------*/
+.header_area{
+    position: relative;
+    
+  }
+  
+  .menu_area{
+    background:none;
+    border:none;
+    .navbar-nav {
+      margin: 0;
+      ul {
+        border:none;
+      }
+      li {
+        padding: 0 0 0 10px;
+        @media screen and (min-width: $screen-md){
+          padding: 20px 19px 30px;
+        }
+  
+        & > a{
+          font-size:14px;
+          color:$lightBlue;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+          border:none;
+           padding:10px 0px;
+          transition: color 0.2s ease-in-out;
+          display: inline-block;
+          &:hover,
+          &:focus{
+            border:none;
+            background:none;
+            color: #fff;
+          }
+        }
+        .mobile-dropdown{
+          position: absolute;
+          height: 42px;
+          width: 30px;
+          right: 0;
+          color: $lightBlue;
+          font-size: 15px;
+          text-align: center;
+          line-height: 42px;
+          z-index: 2;
+        }
+        &.menu-cart{
+          & > a{
+            color: #fff;
+            &:after{
+              font-family: 'FontAwesome';
+              content: '\f290';
+              font-size: 20px;
+            }
+          }
+          .item-count{
+            height: 18px;
+            width: 18px;
+            background: #017EDC;
+            position: absolute;
+            top: 0;
+            left: 5px;
+            border-radius: 50%;
+            text-align: center;
+            color: #fff;
+            font-size: 12px;
+          }
+        }
+        &.current-menu-item{
+          a{
+            color: #fff;
+          }
+        }
+        &.current-menu-parent > a,
+        &.current-menu-ancestor > a{
+          color: #fff;
+        }
+      }
+    }
+    .sub-menu,
+    .children{
+      min-width: 100%;
+      list-style-type: none;
+      padding: 0;
+      transition: opacity .4s ease-in-out , visibility .4s ease-in-out ,max-height .4s ease-in-out ;
+      opacity: 0;
+      visibility: hidden;
+      white-space: nowrap;
+      background: #003961;
+      z-index: 2;
+      max-height: 0;
+      li{
+        padding:0 0 0 10px;
+        @media screen and (min-width: $screen-md){
+          padding: 0 15px;
+        }
+        position: relative;
+        a{
+          color: #fff;
+        }
+      }
+      &.open-sub-menu{
+        visibility: visible;
+        opacity: 1;
+        max-height: 2000px;
+      }
+    }
+    .navbar-collapse{
+      padding:0px;
+    }
+    .container-fluid{
+      padding:0px;
+    }
+  }
+  #menu_area .navbar-nav > .active > a{
+    background-color: transparent;
+  }
+  
+  /* --------- Inner Page Welcome Css: -------------*/
+  .header-v2 {
+    background: #003b65;
+    background: linear-gradient(to bottom,  #003b65 0%,#003d6c 100%);
+    // padding: 20px 0;
+    .top_header {
+      position: relative;
+      top: 0;
+    }
+  }
+  .header_area .top_header.sticky-menu-add {
+    background: #003b65;
+    background: linear-gradient(to bottom,  #003b65 0%,#003d6c 100%);
+    position: fixed;
+    top: 0;
+    z-index: 1049;
+    width: 100%;
+  }
+  .admin-bar .header_area .top_header.sticky-menu-add {
+    top: 46px;
+    @media screen and (min-width: $screen-sm){
+      top: 32px;
+    }
+  }
+  .navbars-header{
+    display: none;
+  }
+  @media  (max-width: $screen-md-min){
+    .header_area{
+      .navbar-nav {
+        overflow: auto;
+        height: 100%;
+      }
+      .navbars-header{
+        display: block;
+        position: relative;
+        z-index: 9999;
+        margin-top: 23px;
+      }
+      .navbar-wrapper{
+        position: fixed;
+        width: 100%;
+        right: 100%;
+        background:#003b65;
+        transition: all 0.4s ease-in-out;
+        top:0;
+        bottom:0;
+        z-index: 99;
+        padding: 50px;
+        // right: 0;
+        &.open-nav{
+          right: 0;
+          .navbar-nav{
+            width: 100%;
+          }
+        }
+        li{
+          float: none;
+          display: block;
+          a{
+            display: block;
+          }
+        }
+      }
+      .navbars-header{
+        float: right;
+      }
+    }
+  }
+  .admin-bar .header_area .navbar-wrapper{
+    top: 32px;
+    @media screen and (max-width: 782px){
+      top: 46px;
+    }
+  }
+  
+  @media screen and (min-width: $screen-md){
+    .menu_area{
+      .navbar-nav {
+        float: right;
+        & > li:not(.menu-cart){
+          & > a{
+            position:relative;
+            &:before,
+            &:after{
+              content: '';
+              position: absolute;
+              left: 0;
+              width: 100%;
+              height: 1px;
+              background: #329DEC;
+              transform: scale3d(0, 1, 1);
+              transition: transform 0.2s;
+            }
+            &:after{
+              bottom: 0;
+              transform-origin: 100% 50%;
+            }
+            &:before{
+              top: 0;
+              transform-origin: 0 50%;
+            }
+            &:hover:after,
+            &:hover:before{
+              transform: scale3d(1, 1, 1);
+              transition-timing-function: cubic-bezier(0.22, 0.61, 0.36, 1);
+              transition-duration: 0.4s;
+            }
+          }
+        }
+        & > li.menu-item-has-children,
+        & > li.page_item_has_children{
+          &:nth-last-child(2){
+            .sub-menu,
+            .children{
+              left: auto;
+              right: 0;
+            }
+          }
+        }
+        li{
+          &.menu-item-has-children,
+          &.page_item_has_children{
+            &:hover > .sub-menu,
+            &:hover > .children{
+              visibility: visible;
+              opacity: 1;
+              max-height: 2000px;
+            }
+          }
+          .mobile-dropdown{
+            right: -6px;
+            color: #017EDC;
+            font-size: 8px;
+          }
+        }
+        .sub-menu,
+        .children{
+          position: absolute;
+          left: 0;
+          top: 100%;
+          li{
+            transition: background 0.4s ease-in-out;
+            &:hover{
+              background: lighten(#003961 , 5%);
+            }
+          }
+          & .sub-menu,
+          & .children{
+           left: 100%;
+           top: 0;
+          }
+        }
+      }
+    }
+  }
+  
